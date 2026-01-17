@@ -1,29 +1,36 @@
 === Sales Data Load Summary ===
 Total records parsed: 80
-Invalid records removed: 10
-Valid records after cleaning: 70
+Invalid records removed (parsing stage): 0
+Records returned from loader: 80
 
-=== Analytics Results ===
-1) Total Revenue per Category:
-  P101: 2254200.00
-  P104: 625863.00
-  P108: 163437.00
-  P105: 146049.00
-  P106: 102422.00
-  P110: 75478.00
-  P109: 65904.00
-  P102: 47081.00
-  P103: 39752.00
-  P107: 7622.00
+=== Validation & Filter Summary (Task 1.3) ===
+{'total_input': 80, 'invalid': 10, 'filtered_by_region': 0, 'filtered_by_amount': 0, 'final_count': 70}
 
-2) Top-Selling Product (by quantity):
-  Mouse (Total Qty: 61)
+=== Part 2 Outputs ===
+Total Revenue: 3527808.00
 
-3) Region-wise Sales Distribution (% of revenue):
-  North: 37.46%
-  South: 25.21%
-  West: 24.06%
-  East: 13.27%
+Region-wise Sales:
+  North: total_sales=1321605.00, transactions=21, percentage=37.46%
+  South: total_sales=889332.00, transactions=13, percentage=25.21%
+  West: total_sales=848902.00, transactions=19, percentage=24.06%
+  East: total_sales=467969.00, transactions=17, percentage=13.27%
+
+Top Selling Products (Top 5):
+  Mouse: qty=61, revenue=40297.00
+  Wireless Mouse: qty=45, revenue=49981.00
+  Webcam: qty=35, revenue=128187.00
+  USB Cable: qty=33, revenue=7622.00
+  Monitor: qty=30, revenue=493759.00
+
+Peak Sales Day:
+  date=2024-12-02, revenue=882906.00, transactions=5
+
+Low Performing Products (<10 qty):
+  Laptop: qty=3, revenue=184329.00
+  KeyboardMechanical: qty=5, revenue=13360.00
+  WebcamHD: qty=6, revenue=17862.00
+  Laptop Charger65W: qty=7, revenue=19922.00
+  MouseWireless: qty=8, revenue=6784.00
 
 === API Demo (DummyJSON) ===
 Product API result for P101:
