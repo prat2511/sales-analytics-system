@@ -1,7 +1,3 @@
-# main.py
-# Complete, clean, exam-safe version
-# Dictionaries + Validation + Task 2.1/2.2/2.3 + Task 3 API + Reporting
-
 from utils.file_handler import load_sales_data, validate_and_filter
 from utils.api_handler import (
     fetch_all_products,          # Task 3.1a (MANDATORY: limit=100)
@@ -19,6 +15,7 @@ from utils.data_processor import (
     find_peak_sales_day,
     low_performing_products,
 )
+from utils.report_generator import generate_sales_report
 
 
 def write_report(path: str, lines: list[str]) -> None:
@@ -171,6 +168,16 @@ def main() -> None:
     output_path = r"output\analysis_report.txt"
     write_report(output_path, report_lines)
     print(f"\nReport saved to: {output_path}")
+
+	# ------------------------------
+    # Part 4: Report Generation (Q5)
+    # ------------------------------
+    generate_sales_report(
+        valid_records,
+        enriched_101_200,
+        output_file=r"output\sales_report.txt"
+    )
+    print("Sales report saved to: output\\sales_report.txt")
 
 
 if __name__ == "__main__":
