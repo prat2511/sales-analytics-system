@@ -13,3 +13,7 @@ venv/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Shell / local artifacts
+git/
+powershell/
